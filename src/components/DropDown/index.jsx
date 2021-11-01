@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-function DropDown({ categories, name }) {
-  const [value, setValue] = useState("");
+function DropDown({ categories, name, setValue, value }) {
 
   const handleChange = (e) => {
     setValue(e.target.value);
