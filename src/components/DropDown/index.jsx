@@ -4,7 +4,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-function DropDown() {
+function DropDown({ categories, name }) {
   const [value, setValue] = useState("");
 
   const handleChange = (e) => {
@@ -13,17 +13,15 @@ function DropDown() {
 
   return (
     <>
-      <FormControl variant="outlined" sx={{ m:1, minWidth: 200 }}>
-        <InputLabel id="categorias">Categorias</InputLabel>
+      <FormControl variant="outlined" sx={{ m: 1, minWidth: 200 }}>
+        <InputLabel id={name}>{name}</InputLabel>
         <Select
-          labelId="categorias"
-          label="Categorias"
+          labelId={name}
+          label={name}
           value={value}
           onChange={handleChange}
         >
-          <MenuItem value="celular">Celular</MenuItem>
-          <MenuItem value="geladeira">Geladeira</MenuItem>
-          <MenuItem value="tv">TV</MenuItem>
+          {categories.map((category) => <MenuItem key={category} value={category}>{category}</MenuItem>)}
         </Select>
       </FormControl>
     </>
