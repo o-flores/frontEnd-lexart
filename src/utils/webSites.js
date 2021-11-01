@@ -1,0 +1,1 @@
+module.exports = ["Mercado Livre", "Buscapé"];
