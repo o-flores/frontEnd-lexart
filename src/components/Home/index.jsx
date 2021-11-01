@@ -3,6 +3,7 @@ import DropDown from '../DropDown';
 import SearchInput from '../SearchInput';
 import productsCategories from '../../utils/categories';
 import sitesList from '../../utils/webSites';
+import SearchButton from '../SearchButton';
 
 function Home() {
   const [category, setCategory] = useState("");
@@ -14,6 +15,7 @@ function Home() {
       <DropDown categories={productsCategories} name="Categorias" value={category} setValue={setCategory} />
       <DropDown categories={sitesList} name="Sites" value={webSite} setValue={setWebSite} />
       <SearchInput value={query} setValue={setQuery} />
+      <SearchButton />
     </div>
   );
 }
