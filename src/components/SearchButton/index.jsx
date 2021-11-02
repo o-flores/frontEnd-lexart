@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchIcon from '@material-ui/icons/Search';
 import { Button } from '@mui/material';
+import Typography from '@mui/material/Typography';
 
 function SearchButton() {
   return (
@@ -8,8 +9,11 @@ function SearchButton() {
       onClick={() => console.log('click')}
       startIcon={<SearchIcon />}
       variant="secondary"
+      size="large"
     >
-      Procurar
+      <Typography variant="body" fontSize="13px">
+        Procurar
+      </Typography>
     </Button>
   )
 }
