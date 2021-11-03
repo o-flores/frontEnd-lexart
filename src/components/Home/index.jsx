@@ -77,8 +77,17 @@ function Home() {
         }
       }>
         <Box>
-          <DropDown categories={productsCategories} name="Categorias" value={category} setValue={setCategory} />
-          <DropDown categories={sitesList} name="Sites" value={webSite} setValue={setWebSite} />
+          <DropDown
+            categories={productsCategories.map(({ name }) => name)}
+            name="Categorias" value={category}
+            setValue={setCategory}
+          />
+          <DropDown
+            categories={sitesList}
+            name="Sites"
+            value={webSite}
+            setValue={setWebSite}
+          />
         </Box>
         <Box>
           <SearchInput value={query} setValue={setQuery} />
