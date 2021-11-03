@@ -32,13 +32,13 @@ function ProductCard({
         image={thumbnail}
       />
       <CardContent>
-        <Typography sx={{ fontWeight: "bold", marginBottom:"10px", textAlign:"center" }}  variant="h6">
+        <Typography sx={{ fontWeight: "bold", marginBottom: "10px", textAlign: "center" }} variant="h6">
           {title}
         </Typography>
-        <Typography sx={{ marginBottom:"8px", textAlign:"justify" }} variant="body2">
+        <Typography sx={{ marginBottom: "8px", textAlign: "justify" }} variant="body2">
           {description}
         </Typography>
-        <Typography sx={{fontWeight: "bold", marginBottom:"5px"}} variant="h5">
+        <Typography sx={{ fontWeight: "bold", marginBottom: "5px" }} variant="h5">
           {`R$ ${price}`}
         </Typography>
         <CardActionArea>
