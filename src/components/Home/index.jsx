@@ -14,57 +14,6 @@ function Home() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    setProducts(
-      [{
-        id: "MLB1962500187",
-        title: "Apple iPhone SE (2a Geração) 64 Gb - Preto",
-        price: 2599,
-        description: "O iPhone SE é o iPhone de 4,7 polegadas mais poderoso (1). Ele vem com o chip A13 Bionic para um desempenho surpreendente em apps, jogos e fotos...",
-        thumbnail: "http://http2.mlstatic.com/D_958906-MLA47681043218_092021-I.jpg",
-        link: "https://www.mercadolivre.com.br/apple-iphone-se-2a-geraco-64-gb-preto/p/MLB15591331",
-      },
-      {
-        id: "MLB1962500187",
-        title: "Apple iPhone SE (2a Geração) 64 Gb - Preto",
-        price: 2599,
-        description: "O iPhone SE é o iPhone de 4,7 polegadas mais poderoso (1). Ele vem com o chip A13 Bionic para um desempenho surpreendente em apps, jogos e fotos...",
-        thumbnail: "http://http2.mlstatic.com/D_958906-MLA47681043218_092021-I.jpg",
-        link: "https://www.mercadolivre.com.br/apple-iphone-se-2a-geraco-64-gb-preto/p/MLB15591331",
-      },
-      {
-        id: "MLB1962500187",
-        title: "Apple iPhone SE (2a Geração) 64 Gb - Preto",
-        price: 2599,
-        description: "O iPhone SE é o iPhone de 4,7 polegadas mais poderoso (1). Ele vem com o chip A13 Bionic para um desempenho surpreendente em apps, jogos e fotos...",
-        thumbnail: "http://http2.mlstatic.com/D_958906-MLA47681043218_092021-I.jpg",
-        link: "https://www.mercadolivre.com.br/apple-iphone-se-2a-geraco-64-gb-preto/p/MLB15591331",
-      },
-      {
-        id: "MLB1962500187",
-        title: "Apple iPhone SE (2a Geração) 64 Gb - Preto",
-        price: 2599,
-        description: "O iPhone SE é o iPhone de 4,7 polegadas mais poderoso (1). Ele vem com o chip A13 Bionic para um desempenho surpreendente em apps, jogos e fotos...",
-        thumbnail: "http://http2.mlstatic.com/D_958906-MLA47681043218_092021-I.jpg",
-        link: "https://www.mercadolivre.com.br/apple-iphone-se-2a-geraco-64-gb-preto/p/MLB15591331",
-      },
-      {
-        id: "MLB1962500187",
-        title: "Apple iPhone SE (2a Geração) 64 Gb - Preto",
-        price: 2599,
-        description: "O iPhone SE é o iPhone de 4,7 polegadas mais poderoso (1). Ele vem com o chip A13 Bionic para um desempenho surpreendente em apps, jogos e fotos...",
-        thumbnail: "http://http2.mlstatic.com/D_958906-MLA47681043218_092021-I.jpg",
-        link: "https://www.mercadolivre.com.br/apple-iphone-se-2a-geraco-64-gb-preto/p/MLB15591331",
-      },
-      {
-        id: "MLB1962500187",
-        title: "Apple iPhone SE (2a Geração) 64 Gb - Preto",
-        price: 2599,
-        description: "O iPhone SE é o iPhone de 4,7 polegadas mais poderoso (1). Ele vem com o chip A13 Bionic para um desempenho surpreendente em apps, jogos e fotos...",
-        thumbnail: "http://http2.mlstatic.com/D_958906-MLA47681043218_092021-I.jpg",
-        link: "https://www.mercadolivre.com.br/apple-iphone-se-2a-geraco-64-gb-preto/p/MLB15591331",
-      },
-      ]
-    )
   }, [])
   return (
     <>
@@ -91,7 +40,7 @@ function Home() {
         </Box>
         <Box>
           <SearchInput value={query} setValue={setQuery} />
-          <SearchButton />
+          <SearchButton setProducts={setProducts} queries={{category, webSite, query}} />
         </Box>
       </Box>
       <ProductsList products={products} />
