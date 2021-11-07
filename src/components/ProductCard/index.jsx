@@ -13,6 +13,8 @@ function ProductCard({
   thumbnail,
   link,
 }) {
+
+  const formattedDescription = `${description.substring(0,140)}...`;
   return (
     <Card sx={
       {
@@ -36,7 +38,7 @@ function ProductCard({
           {title}
         </Typography>
         <Typography sx={{ marginBottom: "8px", textAlign: "justify" }} variant="body2">
-          {description}
+          {formattedDescription}
         </Typography>
         <Typography sx={{ fontWeight: "bold", marginBottom: "5px" }} variant="h5">
           {`R$ ${price}`}
